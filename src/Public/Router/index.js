@@ -2,8 +2,7 @@ import React, {Component, Fragment} from 'react';
 import {HashRouter, Route, Switch, Redirect, BrowserRouter} from 'react-router-dom';
 import Home from '@/Home/index';
 import Detail from '@/Detail/index';
-// import Home from '../../Home/index';
-// import Detail from '../../Detail/index';
+import './index.less'
 
 export default class Routers extends Component {
   constructor(){

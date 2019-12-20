@@ -1,10 +1,8 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import Routers from '@/Public/Router/index';
+import WebPage from '@/Public/Layout/index';
 
 ReactDom.render(
-  // <AppContainer>
-    <Routers />,
-  // </AppContainer>,
+    <WebPage style={{height:'100%'}} />,
   document.getElementById('root')
 );
