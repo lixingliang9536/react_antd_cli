@@ -1,0 +1,10 @@
+#依赖包忽略
+node_modules
+
+#打包文件忽略
+dist/
+build/
+
+# misc
+yarn.lock
+

@@ -49,7 +49,7 @@ function webpackCommonConfigCreator(options){
               options: {
                 presets: ['@babel/preset-react'],
                 plugins: [
-                  "react-hot-loader/babel",   //热更新
+                  // "react-hot-loader/babel",   //热更新
                   // antd 按需加载样式配置
                   [
                     "import", {
@@ -153,6 +153,17 @@ function webpackCommonConfigCreator(options){
           ]
         },
       ]
+    },
+
+    //文件别名配置
+    resolve: {
+      //配置别名
+      alias: {
+        '@': path.resolve(__dirname,'../src'),
+        'img': path.resolve(__dirname,'../images'),
+      },
+      //配置省略后缀
+      extensions: ['.js','.json']
     }
   }
 }

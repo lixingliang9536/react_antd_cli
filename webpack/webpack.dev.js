@@ -13,7 +13,7 @@ const config = {
 
   devServer: {
     contentBase: path.join(__dirname, "../dist"),
-    hot: true   //热更新
+    // hot: true   //热更新
   }
 }
 

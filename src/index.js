@@ -1,5 +1,10 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import Home from './Home/index.js';
+import Routers from '@/Public/Router/index';
 
-ReactDom.render(<Home />, document.getElementById('root'));
+ReactDom.render(
+  // <AppContainer>
+    <Routers />,
+  // </AppContainer>,
+  document.getElementById('root')
+);
