@@ -35,18 +35,3 @@ export default class Detail extends Component {
     )
   }
 }
-
-// function Detail(){
-//   return (
-//     <div>
-//       <h1 className='title'>Hello World</h1>
-//       <h2>这是Detail组件</h2>
-//       <Button type="danger">Click me</Button>
-//       <a href='#/'>回到 Home 组件</a>
-//       {/* <img src={small_pic} alt="" />
-//       <img src={bigger_pic} alt="" /> */}
-//     </div>
-//   )
-// }
-
-// export default hot(Detail);
