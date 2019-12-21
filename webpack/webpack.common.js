@@ -50,6 +50,8 @@ function webpackCommonConfigCreator(options){
                 presets: ['@babel/preset-react'],
                 plugins: [
                   // "react-hot-loader/babel",   //热更新
+                  ["@babel/plugin-proposal-decorators", { "legacy": true }], //解析mobx
+                  ["@babel/proposal-class-properties"], //自动绑定函数或和变量的this
                   // antd 按需加载样式配置
                   [
                     "import", {
