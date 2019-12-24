@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import { Layout, Menu, Icon } from 'antd'
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { observable } from 'mobx';
 
-const { Sider  } = Layout
 const { SubMenu } = Menu;
 
 const menuArr=[
@@ -25,9 +24,7 @@ export default class PageSider extends Component {
   idx = 0
 
   link = ({key})=>{
-    console.log(key)
-    this.props.history.push(`${key}`)
-    console.log(this.props)
+    this.props.history.push(key)
   }
 
   render(){

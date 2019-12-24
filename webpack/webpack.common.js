@@ -69,19 +69,6 @@ function webpackCommonConfigCreator(options){
         //配置CSS样式解析
         {
           test: /\.css$/,
-          // include: path.resolve(__dirname, '../src'),
-          // use: ["style-loader", "css-loader"]
-
-          // use: [
-          //   "style-loader",
-          //   {
-          //     loader: "css-loader",
-          //     options: {
-          //       modules: false, //控制是否关闭css-module模式
-          //     }
-          //   }
-          // ]
-
           use: ExtractTextPlugin.extract({
             fallback: "style-loader",
             use: [
@@ -98,22 +85,6 @@ function webpackCommonConfigCreator(options){
         //配置less
         {
           test: /\.less$/,
-          // include: path.resolve(__dirname, '../src'),
-          // use: ["style-loader", "css-loader", "less-loader"]
-
-          // use: [
-          //   "style-loader",
-          //   {
-          //     loader: "css-loader",
-          //     options: {
-          //       modules: true,//控制是否开启css-module模式
-          //     }
-          //   },
-          //   {
-          //     loader: "less-loader"   //webpack会从最下方应用loader
-          //   }
-          // ]
-
           use: ExtractTextPlugin.extract({
             fallback: "style-loader",
             use: [

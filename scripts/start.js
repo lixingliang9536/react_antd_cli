@@ -4,7 +4,7 @@ const webpackConfig = require('../webpack/webpack.dev.js');
 const compiler = webpack(webpackConfig);
 
 const options = Object.assign({}, webpackConfig.devServer, {
-  open: true
+  open: false //控制启动项目时是否自动在浏览器中打开项目
 })
 const server = new webpackDevServer(compiler, options);
 
