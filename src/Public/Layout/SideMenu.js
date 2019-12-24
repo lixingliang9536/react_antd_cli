@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Layout, Menu, Icon } from 'antd'
+import { Link, withRouter } from 'react-router-dom';
+import { observable } from 'mobx';
 
 const { Sider  } = Layout
 const { SubMenu } = Menu;
@@ -13,21 +15,46 @@ const menuArr=[
   { group:'7', icon:'user', title:'侧边栏--06', item:['option1','option2','option3','option4'] },
 ]
 
-let idx = 0
-
+@withRouter
 export default class PageSider extends Component {
-  constructor(){
-    super()
+  constructor(props){
+    super(props)
+  }
+
+  @observable
+  idx = 0
+
+  link = ({key})=>{
+    console.log(key)
+    this.props.history.push(`${key}`)
+    console.log(this.props)
   }
 
   render(){
     return (
       <Menu
         mode="inline"
-        defaultSelectedKeys={['1']}
-        defaultOpenKeys={['1']}
+        // defaultSelectedKeys={['1']}
+        // defaultOpenKeys={['sub']}
         style={{ height: '100%', borderRight: 0 }}
+        onClick={this.link}
       >
+        <SubMenu
+          key='sub'
+          title={
+            <span>
+              <Icon type='notification' />
+              页面组件
+            </span>
+          }
+        >
+          <Menu.Item key='Home' >
+            Home组件
+          </Menu.Item>
+          <Menu.Item key='Detail' >
+            Detail组件
+          </Menu.Item>
+        </SubMenu>
         {
           menuArr.map((obj)=>{
             return (
@@ -42,9 +69,9 @@ export default class PageSider extends Component {
               >
                 {
                   obj.item.map((itemobj)=>{
-                    idx++
+                    this.idx++
                     return (
-                      <Menu.Item key={idx}>{itemobj}</Menu.Item>
+                      <Menu.Item key={this.idx}>{itemobj}</Menu.Item>
                     )
                   })
                 }

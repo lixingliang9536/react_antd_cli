@@ -16,7 +16,7 @@ export default class Detail extends Component {
   count = 0
 
   clickme = ()=>{
-    // console.log(this.props)
+    console.log(this.props)
     this.count++
     console.log(this.count)
   }
